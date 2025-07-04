@@ -1,0 +1,24 @@
+﻿@model modulo10proyectofinal.Models.Login
+
+<h2>Agregar Usuario</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label>Usuario</label>
+        <input asp-for="Usuario" class="form-control" />
+        <span asp-validation-for="Usuario" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Contraseña</label>
+        <input asp-for="Contrasena" class="form-control" type="password" />
+        <span asp-validation-for="Contrasena" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

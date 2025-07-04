@@ -1,0 +1,15 @@
+﻿@model modulo10proyectofinal.Models.Login
+
+<h2>Eliminar Usuario</h2>
+
+<h4>¿Estás seguro que deseas eliminar este usuario?</h4>
+
+<div>
+    <strong>Usuario:</strong> @Model.Usuario
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

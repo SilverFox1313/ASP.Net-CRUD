@@ -1,0 +1,15 @@
+﻿@model modulo10proyectofinal.Models.Pais
+
+<h2>Eliminar País</h2>
+
+<h4>¿Estás seguro que deseas eliminar este país?</h4>
+
+<div>
+    <strong>Nombre:</strong> @Model.Nombre
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

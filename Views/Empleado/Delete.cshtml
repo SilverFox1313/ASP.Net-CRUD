@@ -1,0 +1,19 @@
+﻿@model modulo10proyectofinal.Models.Empleado
+
+<h2>Eliminar Empleado</h2>
+
+<h4>¿Estás seguro que deseas eliminar este empleado?</h4>
+
+<div>
+    <strong>Nombre:</strong> @Model.Nombre<br />
+    <strong>Apellido:</strong> @Model.Apellido<br />
+    <strong>Email:</strong> @Model.Email<br />
+    <strong>Teléfono:</strong> @Model.Telefono<br />
+    <strong>País ID:</strong> @Model.PaisId
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
